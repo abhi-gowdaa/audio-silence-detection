@@ -1,12 +1,30 @@
-body {
+/* Ensure the body and html take up the full viewport */
+body, html {
   margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+ 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   
+   
 }
 
+/* Apply the gradient background to the body */
+body {
+  background-size: cover; /* Ensures the background covers the entire area */
+  background-position: center;
+   
+  background-image: linear-gradient(190deg, #010000,#300434);
+}
+
+
+ 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
