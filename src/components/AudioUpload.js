@@ -56,7 +56,7 @@ const AudioUpload = () => {
         <TimeDipGraph timeRanges={timeRanges} totalTime={totalTime} />
       </div>
       <div className="upload-container">
-        <h2 className="upload-heading">Upload an Audio File</h2>
+       <h2 className="upload-heading">{loading?"Loading...":"Upload an Audio File"}</h2>
         <input
           type="file"
           accept="audio/*"
