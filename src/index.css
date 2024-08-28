@@ -1,4 +1,4 @@
-/* Ensure the body and html take up the full viewport */
+ 
 body, html {
   margin: 0;
   padding: 0;
@@ -15,9 +15,9 @@ body, html {
    
 }
 
-/* Apply the gradient background to the body */
+ 
 body {
-  background-size: cover; /* Ensures the background covers the entire area */
+  background-size: cover;  
   background-position: center;
    
   background-image: linear-gradient(190deg, #010000,#300434);
