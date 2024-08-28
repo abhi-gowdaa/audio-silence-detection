@@ -8,10 +8,12 @@ const AudioUpload = () => {
   const [uploadStatus, setUploadStatus] = useState("");
   const [timeRanges, setTimeRanges] = useState([]);
   const [totalTime, setTotalTime] = useState(0);
-
+  const [loading,setLoading]=useState(false)
+  
   //response
   const resFunction = (response) => {
     const [totalTime, stamp] = response;
+    setLoading(false);
     setTotalTime(totalTime);
     setTimeRanges(stamp);
   };
@@ -64,7 +66,7 @@ const AudioUpload = () => {
         <button onClick={onFileUpload} className="upload-button">
           Upload
         </button>
-
+       {loading && <p>Loading...</p>}
         {totalTime > 0 && (
           <div class="table-container">
             <table style={{ width: "80%" }}>
