@@ -30,6 +30,7 @@ const AudioUpload = () => {
 
     const formData = new FormData();
     setTotalTime(0);
+    setLoading(true);
     formData.append("file", selectedFile);
 
     try {
@@ -46,6 +47,7 @@ const AudioUpload = () => {
       resFunction(response.data);
       console.log(uploadStatus);
     } catch (error) {
+      setLoading(false);
       setUploadStatus("Error uploading file.");
     }
   };
