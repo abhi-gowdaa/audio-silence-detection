@@ -13,7 +13,6 @@ const AudioUpload = () => {
   //response
   const resFunction = (response) => {
     const [totalTime, stamp] = response;
-    setLoading(false);
     setTotalTime(totalTime);
     setTimeRanges(stamp);
   };
@@ -43,6 +42,7 @@ const AudioUpload = () => {
           },
         }
       );
+       setLoading(false);
       resFunction(response.data);
       console.log(uploadStatus);
     } catch (error) {
