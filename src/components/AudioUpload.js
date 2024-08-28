@@ -66,7 +66,6 @@ const AudioUpload = () => {
         <button onClick={onFileUpload} className="upload-button">
           Upload
         </button>
-       {loading && <p>Loading...</p>}
         {totalTime > 0 && (
           <div class="table-container">
             <table style={{ width: "80%" }}>
